@@ -1,19 +1,13 @@
 package test;
 
 import main.MyDate;
-import org.junit.Rule;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExpectedException;
-import static org.junit.Assert.assertThat;
-
-
 import static org.junit.jupiter.api.Assertions.*;
+
 public class MyDate_Test {
     private MyDate myDate;
     private MyDate myDate2;
 
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
     @Test
     public void testConstructor() {
         myDate = new MyDate(2024,04,28);
