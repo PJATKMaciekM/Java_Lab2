@@ -12,6 +12,7 @@ public class Student {
         this.idx = idx;
         this.mark = mark;
         this.attendance = attendance;
+        this.failMark();
     }
     public Student(){
         this.name = "Unknown";
