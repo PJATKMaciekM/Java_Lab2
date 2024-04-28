@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class Card_Test {
     private Card card;
     private Card card2;
+    private Card card3;
     @Test
     void testCard() {
         card = new Card();
@@ -54,8 +55,8 @@ public class Card_Test {
     }
     @Test
     void testsetRankValue2(){
-        card = new Card(Card.Suit.SPADES, "Jack");
-        assertEquals(11, card.getRankValue());
+        card3= new Card(Card.Suit.SPADES, "Jack");
+        assertEquals(11, card3.getRankValue());
     }
     @Test
     void testComparison(){
@@ -65,9 +66,9 @@ public class Card_Test {
     }
     @Test
     void testComparison2(){
-        card = new Card(Card.Suit.DIAMONDS, 5);
-        card2 = new Card(Card.Suit.SPADES, "Jack");
-        assertEquals("Karta druga przebija pierwszą!", card.announceCompare(card,card2));
+        card2 = new Card(Card.Suit.DIAMONDS, 5);
+        card3 = new Card(Card.Suit.SPADES, "Jack");
+        assertEquals("Karta druga przebija pierwszą!", card2.announceCompare(card2,card3));
     }
     @Test
     void testCompare3(){
@@ -78,7 +79,7 @@ public class Card_Test {
     @Test
     void testCompare4(){
         card = new Card(Card.Suit.HEARTS, "Jack");
-        card2 = new Card(Card.Suit.CLUBS, "Jack");
-        assertEquals("Karty są sobie równe!", card.announceCompare(card,card2));
+        card3 = new Card(Card.Suit.CLUBS, "Jack");
+        assertEquals("Karty są sobie równe!", card.announceCompare(card,card3));
     }
 }
